@@ -23,7 +23,7 @@ service available at: [http://0.0.0.0:5000/tags](http://0.0.0.0:5000/tags)
 RabbitMQ management interface available at: [http://0.0.0.0:15672](http://0.0.0.0:15672)
 
 ### 2) Run with virtual environment
-(need to change the hostname in celery_obj.celery1 from rabbit to localhost)
+(need to change the hostname in celery_obj.celery1 from rabbit to localhost),
 deactivate your virtualenv,
 delete .pyc files:
 ```
