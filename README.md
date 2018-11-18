@@ -19,7 +19,7 @@ Run docker-compose:
 ```
 sudo docker-compose up --force-recreate --build
 ```
-service available at: [http://0.0.0.0:5000/tags](http://0.0.0.0:5000/tags)
+service available at: [http://0.0.0.0:5000/tags](http://0.0.0.0:5000/tags),  
 RabbitMQ management interface available at: [http://0.0.0.0:15672](http://0.0.0.0:15672)
 
 ### 2) Run with virtual environment
@@ -38,7 +38,7 @@ install dependencies from requirements.txt and run server:
 make dep
 make run-gunicorn
 ```
-service available at: [http://0.0.0.0:5000/tags](http://0.0.0.0:5000/tags)
+service available at: [http://0.0.0.0:5000/tags](http://0.0.0.0:5000/tags),  
 stop: POST request to [http://0.0.0.0:5000/shutdown_g](http://0.0.0.0:5000/shutdown_g)
 ## Using service:
 Post request with URL to get task_id:
