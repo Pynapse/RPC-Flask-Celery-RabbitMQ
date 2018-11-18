@@ -1,0 +1,39 @@
+version: '3'
+
+services:  
+
+  rabbit:
+    hostname: rabbit
+    image: rabbitmq:3-management
+    environment:
+      RABBITMQ_DEFAULT_USER: "kas"
+      RABBITMQ_DEFAULT_PASS: "kas"
+      RABBITMQ_DEFAULT_VHOST: "kas_vhost"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: web
+    command: gunicorn -c gunicorn.config.py rest_app:app
+    volumes:
+      - .:/app 
+    ports:
+      - "5000:5000"
+    links:
+      - rabbit
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A rest_app.celery worker --loglevel=debug
+    volumes:
+      - .:/app
+    links:
+      - rabbit
+    depends_on:
+      - rabbit
