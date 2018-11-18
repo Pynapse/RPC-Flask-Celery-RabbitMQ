@@ -9,8 +9,8 @@ The service is called according to the RPC template; Celery + RabbitMQ is used t
 
 At the first, clone this code to your local and go to the directory
 ```
-git clone
-cd RPC_url_calc
+git clone https://github.com/AlxRakhmanov/RPC-Flask-Celery-RabbitMQ
+cd RPC-Flask-Celery-RabbitMQ
 ```
 ### Run using docker-compose (recommended)
 Install docker compose into a system-wide directory: [docker-compose](https://docs.docker.com/compose/install/);
