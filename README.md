@@ -1,4 +1,4 @@
-# RESTful Flask API using Celery and RabbitMQ
+# RESTful Flask service with Celery and RabbitMQ
 
 The service implements the process of determining the number of different types of tags on a Internet page .
 The user transmits the page URL using a POST request, in response he receives the task identifier in the queue.
