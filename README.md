@@ -13,8 +13,8 @@ git clone https://github.com/AlxRakhmanov/RPC-Flask-Celery-RabbitMQ
 cd RPC-Flask-Celery-RabbitMQ
 ```
 ### 1) Run using docker-compose (recommended)
-Install docker compose into a system-wide directory: [docker-compose](https://docs.docker.com/compose/install/);
-Open ports 5672 and 15672;
+Install docker compose into a system-wide directory: [docker-compose](https://docs.docker.com/compose/install/);  
+Open ports 5672 and 15672;  
 Run docker-compose:
 ```
 sudo docker-compose up --force-recreate --build
@@ -23,8 +23,7 @@ service available at: [http://0.0.0.0:5000/tags](http://0.0.0.0:5000/tags)
 RabbitMQ management interface available at: [http://0.0.0.0:15672](http://0.0.0.0:15672)
 
 ### 2) Run with virtual environment
-(need to change the hostname in celery_obj.celery1 from rabbit to localhost),
-deactivate your virtualenv,
+(need to change the hostname in celery_obj.celery1 from rabbit to localhost, deactivate your virtualenv)  
 delete .pyc files:
 ```
 make clean-pyc
